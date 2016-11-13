@@ -9,6 +9,9 @@ public class Mensaje implements IMensaje{
 	@Override
 	public String obtenerMensaje(String nombre) {
 		// TODO Auto-generated method stub
+		if(nombre==null||nombre.equals("")){
+			throw new IllegalArgumentException();
+		}
 		return "Hola"+": "+nombre;
 	}
 

@@ -10,8 +10,19 @@ public class MensajeTest {
 	public void obtenerMensajeSegunParamentro() {
 		Mensaje mensaje = new Mensaje();
 		String resultado = mensaje.obtenerMensaje("alejosd5");
-		assertNotNull(resultado);
 		assertEquals("Hola: alejosd5", resultado);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void validarRespuestaMensajeNull(){
+		Mensaje mensaje = new Mensaje();
+		mensaje.obtenerMensaje(null);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void validarRespuestaMensajeParamentroVacio(){
+		Mensaje mensaje = new Mensaje();
+		mensaje.obtenerMensaje("");
 	}
 
 }
