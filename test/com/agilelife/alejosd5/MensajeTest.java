@@ -8,7 +8,10 @@ public class MensajeTest {
 
 	@Test
 	public void obtenerMensajeSegunParamentro() {
-		fail("Not yet implemented");
+		Mensaje mensaje = new Mensaje();
+		String resultado = mensaje.obtenerMensaje("alejosd5");
+		assertNotNull(resultado);
+		assertEquals("Hola: alejosd5", resultado);
 	}
 
 }

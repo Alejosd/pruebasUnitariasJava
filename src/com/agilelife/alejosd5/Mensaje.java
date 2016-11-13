@@ -9,7 +9,7 @@ public class Mensaje implements IMensaje{
 	@Override
 	public String obtenerMensaje(String nombre) {
 		// TODO Auto-generated method stub
-		return "Hola"+nombre;
+		return "Hola"+": "+nombre;
 	}
 
 }
